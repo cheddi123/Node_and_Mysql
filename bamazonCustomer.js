@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "",// enter password as a string
   database: "bamazon"
 });
 
@@ -19,6 +19,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
+  showTable();
  newTransaction();
  
 });
@@ -38,7 +39,7 @@ function showTable() {
 
 // function which prompts the user for what action they should take
 function start() {
-  showTable();
+  // showTable();
   inquirer
     .prompt([
       {

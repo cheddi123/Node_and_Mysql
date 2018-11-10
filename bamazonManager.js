@@ -6,7 +6,7 @@ var inquirer = require("inquirer")
 var keys = require("./keys.js")
 
 var passWORD = keys.pass;
-console.log(passWORD)
+
 var connection = mysql.createConnection({
   host: "localhost",
 
@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "",//enter your password as a string
   database: "bamazon"
 });
 //start the app
